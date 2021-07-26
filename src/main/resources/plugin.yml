@@ -1,0 +1,5 @@
+name: n-Arenas
+description: A simple arena plugin with pre-set kits
+main: dev.naurzera.arenas.Main
+author: Naur
+version: 0.0.2

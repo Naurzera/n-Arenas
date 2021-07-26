@@ -1,0 +1,95 @@
+# Criar comando automaticamente quando uma arena é criada
+# Exemplo: Ao criar a arena "chain" também criar o comando
+# '/chain' que irá levar até a entrada da arena.
+criar-comandos: true
+permissao-staff: 'n-arenas.admin'
+
+mensagens:
+  #----------------------------Variáveis--------------------------#
+  # %player% = Nome do jogador                                    #
+  # %arena% = Nome da arena                                       #
+  #                                                               #
+  # Para desativar qualquer mensagem, basta deixar                #
+  # depois dos : um []                                            #
+  # Exemplo                                                       #
+  # 'entrando: []'                                                #
+  #                                                               #
+  #-------------------------Mensagens-Gerais----------------------#
+  entrando:
+    - ''
+    - '§e Você foi teleportado para §6%arena%'
+    - ''
+  saindo:
+    - ''
+    - '§e Você voltou para o spawn!'
+    - ''
+  morrendo:
+    - '§e Você foi morto por %player%'
+  outro-entrando:
+    - '§e %player% §aentrou §ena arena!'
+  outro-saindo:
+    - '§e %player% §csaiu §eda arena!'
+  outro-morrendo:
+    - '§e %player% §cmorreu!'
+  command-help-staff:
+    - ''
+    - '§e ============== Comandos da Arena =============='
+    - ''
+    - '§6/arena (arena) §e- Ir à arena determinada.'
+    - '§6/arena criar (arena) §e- Cria uma nova arena;'
+    - '§6/arena del (arena) §e- Deleta uma arena;'
+    - '§6/arena setkit (arena) §e- Define o kit de uma arena;'
+    - '§6/arena setentrada (arena) §e- Define a entrada de uma arena;'
+    - '§6/arena setsaida §e- Define a saída de todas as arenas;'
+    - '§6/arenas §e- Lista as arenas do servidor.'
+    - ''
+    - '§e ==============================================='
+    - ''
+  command-help:
+    - ''
+    - '§e ============== Comandos da Arena =============='
+    - ''
+    - '§6/arena (arena) §e- Ir à arena determinada.'
+    - '§6/arenas §e- Lista as arenas do servidor.'
+    - ''
+    - '§e ==============================================='
+    - ''
+  #--------------------------------------------------------------#
+
+  #-----------------------------Staff----------------------------#
+  arena-criada:
+    - ''
+    - '§e Você criou §6%arena% §ecom sucesso'
+    - ''
+    - '§e A entrada foi definida como o seu local atual.'
+    - '§e Os itens foram definidos pelos seus itens atuais.'
+    - ''
+  arena-removida:
+    - ''
+    - '§c Você deletou §6%arena% §ccom sucesso'
+    - ''
+  kit-definido:
+    - '§e Você definiu com sucesso o kit de §6%arena%'
+  entrada-definida:
+    - '§e Você definiu com sucesso a entrada de §6%arena%'
+  spawn-definido:
+    - '§e Você definiu com sucesso a saída de todas as arenas.'
+  #--------------------------------------------------------------#
+
+  #-----------------------------Erros----------------------------#
+  entrada-nao-definida:
+    - '§c Erro: A entrada dessa arena ainda não foi definida!'
+  saida-nao-definida:
+    - '§c Erro: A saída ainda não foi definida!'
+  inventario-com-itens:
+    - '§c Erro: Você precisa esvaziar o seu inventário para entrar na arena!'
+  arena-nao-encontrada:
+    - '§c Erro: Arena removida ou não encontrada.'
+  voce-esta-em-outra-arena:
+    - '§c Erro: Você já está na arena %arena%.'
+  erro-ao-criar:
+    - '§c Houve um erro ao tentar criar essa arena.'
+  sem-permissao:
+    - '§c Você não tem permissão para executar este comando!'
+  comandos-bloqueados:
+    - '§c Você não pode executar comandos enquanto está na arena!'

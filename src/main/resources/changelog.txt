@@ -1,0 +1,8 @@
+Versão 0.0.1:
+1. Primeira versão estável do plugin.
+
+Versão 0.0.2:
+1. Corrigido um erro onde depois de setar a arena e dar '/clear' os itens ficavam com a quantidade = 0.
+
+Versão 0.0.3:
+1. Corrigida a mensagem de erro quando tenta utilizar um comando dentro da arena.
